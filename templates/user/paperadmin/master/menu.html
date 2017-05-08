@@ -1,0 +1,63 @@
+{% load static %}
+<style>
+    .sidebar-bluegray {
+        background-color: #343C5C !important;
+    }
+
+    .sidebar-bluegray nav.widget-body > ul.acc-menu li a {
+        background-color: #343C5C !important;
+    }
+</style>
+<div class="static-sidebar-wrapper sidebar-bluegray">
+    <div class="static-sidebar">
+        <div class="sidebar">
+            <div class="widget" id="widget-profileinfo">
+                <div class="widget-body">
+                    <div class="userinfo ">
+                        <div class="avatar pull-left">
+                            <img src="https://s3-ap-southeast-1.amazonaws.com/overcart.media/User-blue.png"
+                                 class="img-responsive img-circle">
+                        </div>
+                        <div class="info">
+                            <span class="username"
+                                  style="color: #2c7ea2">{{ request.session.username }}</span>
+                            <span class="useremail"
+                                  style="color: #2c7ea2">{{ request.session.email_address }}</span>
+                        </div>
+
+                        <div class="acct-dropdown clearfix dropdown">
+                            <span class="pull-left"><span
+                                    class="online-status online"></span>Online</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="widget stay-on-collapse" id="widget-sidebar">
+                <nav role="navigation" class="widget-body">
+                    <ul class="acc-menu">
+                        <li class="nav-separator"><span>Navigation</span></li>
+                        <li><a class="withripple" href="/"><span
+                                class="icon"><i class="material-icons">insert_chart</i></span><span>Dashboard</span></a>
+                        </li>
+                        <li><a class="withripple"
+                               href="{% url 'invoice:process_orders' %}"><span
+                                class="icon"><i
+                                class="material-icons">euro_symbol</i></span><span>Orders</span></a>
+                        </li>
+                        <li><a class="withripple"
+                               href="javascript:void(0);"><span
+                                class="icon"><i
+                                class="material-icons">contact_mail</i></span><span>My
+                            Requests</span></a>
+                        </li>
+                        <li>
+                            <a class="withripple"
+                               href="javascript:void(0)"><span class="icon"><i
+                                    class="material-icons">settings</i></span><span>Settings</span></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>

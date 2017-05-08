@@ -1,0 +1,19 @@
+<ul class="nav nav-tabs" style="display: inline-block;">
+    <li {% if tab == "picking_single_item_orders" %}class="active"{% endif %}>
+        <a href="{% url 'picklist:picking_single_item_orders' %}">Pick</a></li>
+    <li {% if tab == "process_orders" %}class="active"{% endif %}><a
+            href="{% url 'invoice:process_orders' %}">Process</a></li>
+    <li {% if tab == "pack_orders" %}class="active"{% endif %}><a
+            href="{% url 'shipment:pack_orders' %}">Pack</a></li>
+    <li {% if tab == "shipment_orders" %}class="active"{% endif %}><a
+            href='{% url 'shipment:shipment_orders' %}'>Ship & Manifest</a>
+    </li>
+    <li {% if tab == "in_transit" %}class="active"{% endif %}><a
+            href='{% url 'reports:get_intransit_shipments' %}'>In Transit</a>
+    </li>
+    <li {% if tab == "delivered" %}class="active"{% endif %}><a
+            href='{% url 'reports:get_delivered_shipments' %}'>Delivered</a>
+    </li>
+    <li {% if tab == "returns" %}class="active"{% endif %}><a
+            href='{% url 'reports:get_RTO_shipments' %}'>Returns</a></li>
+</ul>
