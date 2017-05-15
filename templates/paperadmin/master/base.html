@@ -1,0 +1,65 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "paperadmin/master/head.html" %}
+    {% block customstyle %}{% endblock %}
+    {% block extrahead %}{% endblock %}
+    <style type="text/css">
+        .pointer {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body class="animated-content infobar-overlay">
+
+{% include "paperadmin/master/topnav.html" %}
+
+<div id="wrapper">
+    <div id="layout-static">
+        {% block sidebar %}
+            {% include "commons/sidebar.html" %}
+        {% endblock %}
+
+        <div class="static-content-wrapper">
+
+            <!-- MAIN CONTENT START-->
+            <div class="static-content">
+                <div class="page-content">
+                    <ol class="breadcrumb">
+                        {% block breadcrumb %}{% endblock %}
+                    </ol>
+                    <div class="page-heading">
+                        {% block heading %}{% endblock %}
+                    </div>
+                    <div class="container-fluid">
+                        {% block alert %}
+                            {% include "paperadmin/master/notification.html" %}
+                        {% endblock %}
+                        {% block content %}{% endblock %}
+                    </div>
+                    <!-- .container-fluid -->
+                </div>
+                <!-- #page-content -->
+            </div>
+            <!-- MAIN CONTENT END-->
+
+            <footer role="contentinfo">
+                <div class="clearfix">
+                    <ul class="list-unstyled list-inline pull-left">
+                        <li><h6 style="margin: 0;">&copy; {% now "Y" %} Exit10 Pvt. Ltd.</h6></li>
+                    </ul>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+</div>
+
+{% include "paperadmin/master/scripts.html" %}
+{% block extrascript %}{% endblock %}
+
+</body>
+</html>

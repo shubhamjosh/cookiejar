@@ -1,0 +1,342 @@
+{% extends "paperadmin/master/static-master.html" %}
+{% load static %}
+
+{% block extrahead %}
+    <link rel="stylesheet"
+          href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic%7COpen+Sans:400,400italic,700,700italic%7CRaleway:400,400italic,700,700italic">
+{% endblock %}
+
+{% block content %}
+    <style>
+        .container-fluid {
+            width: 1000px;
+        }
+
+        body {
+            font-size: 15px;
+            color: rgba(66, 66, 66, .6) !important;
+        }
+
+        body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4 {
+            font-family: 'raleway', 'roboto', 'helvetica', 'arial', sans-serif;
+            font-weight: 300;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 800;
+        }
+
+        h2 {
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        h5, h6, h4 {
+            font-weight: 600;
+        }
+
+        a:hover, a:focus {
+            color: #fff;
+            background: rgba(23, 196, 187, 0.8);
+        }
+
+        hr {
+            background-color: rgba(66, 66, 66, .2);
+            max-width: 100px;
+        }
+    </style>
+    <div id="layout-static">
+        {# include "paperadmin/master/menu.html" #}
+        <div class="static-content-wrapper"
+             style="background-image: url(//d9hhrg4mnvzow.cloudfront.net/signup.overboxd.com/ctp7wh-texture.png);">
+
+            <!-- MAIN CONTENT START-->
+            <div class="static-content">
+                <div class="page-content">
+                    <div class="container-fluid">
+                        <div class="row" style="margin-top: 100px;">
+                            <div class="col-md-12 text-center">
+                                <h1 style="color: #fff">Manage your returns seamlessly</h1>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 15px;">
+                            <div class="col-md-12 text-center">
+                                <h4 style="color: #fff">Managing customer returns effectively can increase your
+                                    profitability by almost 50%!</h4>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 30px; margin-bottom: 80px;">
+                            <div class="col-md-12 text-center">
+                                <a href="{% url "register" %}" class="signup">SIGN UP FOR BETA</a><a href="#learn-more
+" class="signup-alt" id="learn">LEARN
+                                MORE</a>
+                            </div>
+                        </div>
+                        <img src="http://d9hhrg4mnvzow.cloudfront.net/signup.overboxd.com/5d0859b2-dashboard3_0pv09z0pa09z00a000.png"
+                             style="width: 100%; margin-bottom: -35px">
+                    </div>
+                    <!-- .container-fluid -->
+                </div>
+                <!-- #page-content -->
+            </div>
+            <!-- MAIN CONTENT END-->
+
+        </div>
+    </div>
+    <div id="layout-static">
+        <div class="static-content-wrapper" style="background: #fff;" id="learn-more">
+
+            <!-- MAIN CONTENT START-->
+            <div class="static-content">
+                <div class="page-content">
+                    <div class="container-fluid text-center">
+                        <div class="row" style="margin-top: 50px;">
+                            <div class="col-md-12">
+                                <h2>Discover how Overboxd can help your retail business</h2>
+                            </div>
+                        </div>
+                        <div class="row" style="margin:10px 0;">
+                            <div class="col-md-2 col-md-offset-5">
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                Overboxd helps you manage your customer returns right from inception until you're ready
+                                to liquidate them.
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 60px">
+                            <div class="col-md-4">
+                                <img src="//d9hhrg4mnvzow.cloudfront.net/signup.overboxd.com/10ug3x9-icon1.png" alt="">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="//d9hhrg4mnvzow.cloudfront.net/signup.overboxd.com/6vkhr7-icon2.png" alt="">
+                            </div>
+                            <div class="col-md-4">
+                                <img src="//d9hhrg4mnvzow.cloudfront.net/signup.overboxd.com/gs2gbz-icon3.png" alt="">
+                            </div>
+                        </div>
+                        <div class="row" style="margin: 15px 0;">
+                            <div class="col-md-4">
+                                <h4>QUALITY ASSURANCE</h4>
+                            </div>
+                            <div class="col-md-4">
+                                <h4>EASY TRACKING</h4>
+                            </div>
+                            <div class="col-md-4">
+                                <h4>LIQUIDATION</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                Understand where your returns are coming from, and measure reverse logistics efficiency.
+                            </div>
+                            <div class="col-md-4">
+                                Assess the quality of returns and segregate how each product is liquidated.
+                            </div>
+                            <div class="col-md-4">
+                                Connect with leading marketplaces to run flash sales. Or use the Overboxd bidding
+                                platform for bulk liquidation.
+                            </div>
+                            <div class="col-md-2">&nbsp;</div>
+                        </div>
+                    </div>
+                    <!-- .container-fluid -->
+                </div>
+                <!-- #page-content -->
+            </div>
+            <!-- MAIN CONTENT END-->
+        </div>
+    </div>
+    <div id="layout-static">
+        <div class="static-content-wrapper">
+
+            <!-- MAIN CONTENT START-->
+            <div class="static-content">
+                <div class="page-content">
+                    <div class="container-fluid">
+                        <div class="row" style="margin-top: 35px">
+                            <div class="col-md-7">
+                                <h2>Here's how Overboxd will simplify your returns, so you can focus on more important
+                                    things. (Like making money.)</h2>
+                                <br/>
+                                <hr>
+                                <br/>
+
+                                <p>A simple control panel provides you with the right tools to track your customer
+                                    returns. Sync your inventory, get pricing intelligence, and liquidate inventory
+                                    right from your panel. No more scouting for buyers, distress sales, or talking to
+                                    shady middlemen.</p>
+                                <br/>
+                                <a href="{% url "register" %}" class="signup"> Sign Up for Beta</a>
+                            </div>
+                            <div class="col-md-4">
+                                <img src="http://d9hhrg4mnvzow.cloudfront.net/signup.overboxd.com/86468d5c-mbook-screen_0c907j0c807j000000.png"
+                                     alt="" style="margin-top: 200px; margin-left: -50px">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- .container-fluid -->
+                </div>
+                <!-- #page-content -->
+            </div>
+            <!-- MAIN CONTENT END-->
+        </div>
+    </div>
+    <div id="layout-static">
+        <div class="static-content-wrapper" style="background: #fff">
+
+            <!-- MAIN CONTENT START-->
+            <div class="static-content">
+                <div class="page-content">
+                    <div class="container-fluid">
+                        <div class="row"
+                             style="background: rgba(23,196,187,1);height: 100px;margin-top: 20px;padding: 25px 0;">
+                            <div class="col-md-7">
+                                <h3 style="margin: 10px; color: #fff;">Do you want to take a free trial for 3
+                                    months?</h3>
+                            </div>
+                            <div class="col-md-5"><a href="{% url "register" %}" class="signup-alt"
+                                                     style="margin-right: 0px; background-color: #fff; color: #000;">YES,
+                                SIGN ME UP FOR BETA RELEASE</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="layout-static">
+        <div class="static-content-wrapper">
+
+            <!-- MAIN CONTENT START-->
+            <div class="static-content">
+                <div class="page-content">
+                    <div class="container-fluid">
+                        <div class="row" style="margin-top: 50px; margin-bottom: 30px;">
+                            <div class="col-md-7">
+                                <h2>Deal in smartphones? Get free access to our proprietary QC app to reduce
+                                    returns.</h2>
+                                <br/>
+                                <br/>
+                                <hr>
+                                <br/>
+
+                                <p>Our proprietary Android app helps you test a mobile phone remotely before you accept
+                                    a return. Or simply ensure that the quality of smartphones you're reselling meets
+                                    consumer expectations (and reduce further returns)!</p>
+                                <br/>
+                                <a href="{% url "register" %}" class="signup"> Sign Up for Beta</a>
+                            </div>
+                            <div class="col-md-4 col-md-offset-1">
+                                <img src="http://d9hhrg4mnvzow.cloudfront.net/signup.overboxd.com/27e91421-tym.png"
+                                     alt="" width="226px" style="margin-top: 50px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer role="contentinfo">
+                <div class="clearfix">
+                    <ul class="list-unstyled list-inline pull-left">
+                        <li><h6 style="margin: 0;">&copy; 2016 Exit10 Pvt. Ltd.</h6></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <div id="layout-static" class="hide">
+        <div class="static-content-wrapper" style="background-color: #fff">
+
+            <!-- MAIN CONTENT START-->
+            <div class="static-content">
+                <div class="page-content">
+                    <div class="container-fluid text-center">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h2>Signup for our Beta</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-3">
+                                <form action="/fsg?pageId=87842d5a-80bd-11e6-8f79-02422e92ac52&amp;variant=a"
+                                      method="POST">
+                                    <input type="hidden" name="pageId"
+                                           value="87842d5a-80bd-11e6-8f79-02422e92ac52"><input type="hidden"
+                                                                                               name="pageVariant"
+                                                                                               value="a">
+                                    <fieldset class="clearfix">
+                                        <div class="lp-pom-form-field clearfix" id="container_email">
+                                            <label for="email" class="main lp-form-label" id="label_email"
+                                                   style="height: auto;">Email&nbsp;*</label><input type="text"
+                                                                                                    id="email"
+                                                                                                    name="email"
+                                                                                                    class="text form_elem_email"
+                                                                                                    placeholder="Email">
+                                        </div>
+                                        <div class="lp-pom-form-field clearfix" id="container_name">
+                                            <label for="name" class="main lp-form-label" id="label_name"
+                                                   style="height: auto;">Name</label><input type="text" id="name"
+                                                                                            name="name"
+                                                                                            class="text form_elem_name"
+                                                                                            placeholder="Name">
+                                        </div>
+                                        <div class="lp-pom-form-field clearfix" id="container_phone_number">
+                                            <label for="phone_number" class="main lp-form-label" id="label_phone_number"
+                                                   style="height: auto;">Phone Number</label><input type="text"
+                                                                                                    id="phone_number"
+                                                                                                    name="phone_number"
+                                                                                                    class="text form_elem_phone_number">
+                                        </div>
+                                    </fieldset>
+                                    <input type="text" id="gnxoOyG32hBfiMTw2YrZBy7bWuT3DGm5"
+                                           name="ubafs-gnxoOyG32hBfiMTw2YrZBy7bWuT3DGm5"
+                                           style="display:none !important;">
+                                    <input type="hidden" id="ubafs-jev" name="ubafs-jev"
+                                           value="{&quot;date&quot;:&quot;2016-09-29T06:50:20.373Z&quot;,&quot;agent&quot;:&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36&quot;,&quot;screen&quot;:{&quot;availWidth&quot;:1280,&quot;availHeight&quot;:724,&quot;width&quot;:1280,&quot;height&quot;:800},&quot;window&quot;:{&quot;innerWidth&quot;:1280,&quot;innerHeight&quot;:384},&quot;hasPlugins&quot;:true}">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer role="contentinfo">
+                <div class="clearfix">
+                    <ul class="list-unstyled list-inline pull-left">
+                        <li><h6 style="margin: 0;">&copy; 2016 Exit10 Pvt. Ltd.</h6></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    {# If signup is success then display a popup message #}
+    {% if request.GET.signup == 'success' %}
+        <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h2 class="modal-title">Congratulations!</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p>Thank you for submitting the documents.</p>
+
+                        <p>Once the documents have been validated, you will receive an email to set your new
+                            password</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% block extrascript %}
+            <script>
+                $('#myModal').modal('show');
+            </script>
+        {% endblock %}
+    {% endif %}
+{% endblock %}
+
+
+

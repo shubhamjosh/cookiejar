@@ -1,0 +1,72 @@
+{% load static %}
+<header id="topnav" class="navbar navbar-default navbar-fixed-top"
+        role="banner">
+
+    <div class="logo-area">
+        <a class="navbar-brand navbar-brand-default" href="/">
+            <img class="show-on-collapse img-logo-white" alt="Overcart"
+                 src="https://s3-ap-southeast-1.amazonaws.com/overcart.media/favicon46x46.png">
+            <img class="show-on-collapse img-logo-dark" alt="Overcart"
+                 src="https://s3-ap-southeast-1.amazonaws.com/overcart.media/favicon46x46.png">
+            <img class="img-white" alt="Overcart"
+                 src="https://s3-ap-southeast-1.amazonaws.com/overcart.media/logo_177x23.png">
+            <img class="img-dark" alt="Overcart"
+                 src="https://s3-ap-southeast-1.amazonaws.com/overcart.media/logo_177x23.png">
+        </a>
+
+		<span id="trigger-sidebar"
+              class="toolbar-trigger toolbar-icon-bg stay-on-search">
+			<a data-toggle="tooltips" data-placement="right"
+               title="Toggle Sidebar">
+				<span class="icon-bg">
+					<i class="material-icons">menu</i>
+				</span>
+            </a>
+		</span>
+        <div id="search-box">
+            <input class="form-control" type="text" placeholder="Search..."
+                   id="search-input"/>
+        </div>
+    </div>
+    <!-- logo-area -->
+
+    <ul class="nav navbar-nav toolbar pull-right">
+        <li class="toolbar-icon-bg appear-on-search ov-h"
+            id="trigger-search-close">
+            <a class="toggle-fullscreen"><span class="icon-bg">
+	        	<i class="material-icons">close</i>
+	        </span></a>
+        </li>
+        {% if "rms" in request.path %}
+            <li class="" style="text-transform: uppercase;">
+                <a href="#" class="btn btn-default">Upload
+                    Products</a>
+            </li>
+            <li class="" style="margin-left: 10px; text-transform: uppercase;">
+                <a href="#" class="btn btn-default">Request
+                    Pickup</a>
+            </li>
+        {% endif %}
+        <li class="toolbar-icon-bg hidden-xs" id="trigger-fullscreen">
+            <a href="#" class="toggle-fullscreen"><span class="icon-bg">
+	        	<i class="material-icons">fullscreen</i>
+	        </span></a>
+        </li>
+        <li class="toolbar-icon-bg dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span
+                    class="icon-bg">
+	        	<i class="material-icons">person_outline</i>
+	        </span></a>
+
+            <div class="dropdown-menu animated notifications">
+                <ul class="dropdown-menu">
+                    <li><a href="
+                    {% url 'users:auth_logout' %}" style="font-size: 13px;
+                    padding: 3px 20px;
+                    "><i
+                            class="fa fa-sign-out"></i> Logout</a></li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</header>

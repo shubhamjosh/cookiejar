@@ -1,0 +1,85 @@
+
+{% block extrascript %}
+<style>
+/*To make sure there is modal displayed with this class for demo*/
+.visiblemodal {
+	position: relative;
+	top: auto;
+	right: auto;
+	left: auto;
+	bottom: auto;
+	z-index: 1;
+	display: block;
+	overflow: hidden;
+}
+</style>
+{% endblock %}
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+								<h2 class="modal-title">Register to classroom!</h2>
+							</div>
+							<div class="modal-body">
+                                  <form action="/register/"
+                      method="POST"
+                      class="form-horizontal">
+                    <div class="panel-body">
+                        <div class="col-md-12">
+                            <div class="">
+                                <div class="form-group mb-md">
+                                    <div class="col-md-12">
+                                      {{ form_signup.username }}
+                                    </div>
+                                </div>
+                                  <div class="form-group mb-md">
+                                    <div class="col-md-12">
+                                    {{ form_signup.email }}
+                                    </div>
+                                </div>
+                                <div class="form-group mb-md">
+                                    <div class="col-md-12">
+                                    {{ form_signup.password }}
+                                    </div>
+                                </div>
+                                <div class="form-group mb-md">
+                                    <div class="col-md-12">
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="clearfix">
+                                <a href="/login/"
+                                   class="btn btn-custom pull-left">Already
+                                    Registered? Login</a>
+                                <button id="register" type="submit"
+                                        class="btn btn-primary btn-raised pull-right">
+                                    Register
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </form>
+
+							</div>
+							<div class="modal-footer">
+                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							</div>
+						</div><!-- /.modal-content -->
+					</div>
+
+
+  </div>
+</div>
+
+

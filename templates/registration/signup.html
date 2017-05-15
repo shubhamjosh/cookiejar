@@ -1,0 +1,92 @@
+{% extends "paperadmin/master/static-master.html" %}
+{% load static %}
+
+{% block customstyle %}
+    <style>
+        .navbar-nav {
+            display: none;
+        }
+
+        .loginWrapper {
+            padding: 20px 0;
+        }
+
+        h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+            font-weight: 200;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+
+
+
+    <div class="row">
+        <div class="col-md-5 col-md-offset-4">
+            <div class="clearfix" style="margin: 20px 0">
+                <h3>Register</h3>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2>Informaion</h2>
+                </div>
+
+                <form action="/register/"
+                      method="POST"
+                      class="form-horizontal">
+                    <div class="panel-body">
+                        <div class="col-md-12">
+                            <div class="">
+                                <div class="form-group mb-md">
+                                    <div class="col-md-12">
+                                      {{ form.username }}
+                                    </div>
+                                </div>
+                                  <div class="form-group mb-md">
+                                    <div class="col-md-12">
+                                    {{ form.email }}
+                                    </div>
+                                </div>
+                                <div class="form-group mb-md">
+                                    <div class="col-md-12">
+                                    {{ form.password }}
+                                    </div>
+                                </div>
+                                <div class="form-group mb-md">
+                                    <div class="col-md-12">
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <div class="col-md-12">
+                            <div class="clearfix">
+                                <a href="/login/"
+                                   class="btn btn-custom pull-left">Already
+                                    Registered? Login</a>
+                                <button id="register" type="submit"
+                                        class="btn btn-primary btn-raised pull-right">
+                                    Register
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+{% endblock %}
+
+{% block extrascript %}
+    <script type="text/javascript"
+            src="{% static "assets/js/custom/login.js" %}"></script>
+{% endblock %}

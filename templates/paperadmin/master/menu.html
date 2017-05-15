@@ -1,0 +1,90 @@
+{% load static %}
+<div class="static-sidebar-wrapper sidebar-bluegray">
+    <div class="static-sidebar">
+        <div class="sidebar">
+            <div class="widget" id="widget-profileinfo">
+                <div class="widget-body">
+                    <div class="userinfo ">
+                        <div class="avatar pull-left">
+                            <img src="https://s3-ap-southeast-1.amazonaws.com/overcart.media/User-blue.png"
+                                 class="img-responsive img-circle">
+                        </div>
+                        <div class="info">
+                            <span class="username" style="color: #2c7ea2">{{ request.user.username }}</span>
+                            <span class="useremail" style="color: #2c7ea2">{{ request.user.email }}</span>
+                        </div>
+
+                        <div class="acct-dropdown clearfix dropdown">
+                            <span class="pull-left"><span class="online-status online"></span>Online</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="widget stay-on-collapse" id="widget-sidebar">
+                <nav role="navigation" class="widget-body">
+                    <ul class="acc-menu">
+                        <li class="nav-separator"><span>Navigation</span></li>
+                        <li><a class="withripple" href="
+                        {% url 'profile:dashboard' %}"><span class="icon"><i
+                                class="fa fa-dashboard"></i></span><span>Dashboard</span></a></li>
+                        <li><a class="withripple" href="javascript:;"><span class="icon"><i
+                                class="fa fa-shopping-cart"></i></span><span>Inventory</span></a>
+                            <ul class="acc-menu">
+                                <li><a class="withripple" href="
+                                #">Add Products</a></li>
+                                <li><a class="withripple" href="
+                                #">Inventory List</a></li>
+                                <li><a class="withripple" href="
+                                #">My Requests</a></li>
+                                <li><a class="withripple" href="
+                                #">Processed Inventory</a></li>
+                            </ul>
+                        </li>
+                        {% if perms.rms.view_userclient %}
+                            <li><a class="withripple" href="javascript:;"><span class="icon"><i
+                                    class="fa fa-bar-chart-o"></i></span><span>Analytics</span></a>
+                                <ul class="acc-menu">
+                                    <li><a class="withripple" href="
+                                    #">Orders Report</a></li>
+                                    <li><a class="withripple" href="
+                                    #">Products Report</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a class="withripple" href="javascript:;"><span class="icon"><i class="fa fa-check"></i></span><span>Quality Assurance</span></a>
+                                <ul class="acc-menu">
+                                    <!-- <li><a  class="withripple" href="javascript:void(0)">QC Reports</a></li> -->
+                                    <li><a class="withripple" href="
+                                    #">Repair</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a class="withripple" href="javascript:;"><span class="icon"><i class="material-icons"
+                                                                                                style="font-size: inherit;">work</i></span><span>Orders</span></a>
+                                <ul class="acc-menu">
+                                    <li><a class="withripple" href="
+                                    #">Completed Orders</a></li>
+                                    <li><a class="withripple" href="
+                                    #">Print Shipping
+                                        Labels</a></li>
+                                </ul>
+                            </li>
+                        {% endif %}
+                        <li><a class="withripple" href="javascript:void(0)"><span class="icon"><i class="fa fa-cog"></i></span><span>Settings</span></a>
+                            <ul class="acc-menu">
+                                <li><a class="withripple" href="
+                                {}">My Account</a></li>
+
+                                {% if perms.rms.view_clientwarehouse %}
+                                    <li><a class="withripple" href="
+                                    #">Warehouses & Banks</a>
+                                    </li>
+                                {% endif %}
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
